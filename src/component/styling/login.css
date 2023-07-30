@@ -1,5 +1,5 @@
 .login {
-    background-color: #f8f8f8;
+    /* background-color: ; */
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -11,7 +11,7 @@
 .login-container {
     padding: 100px;
     text-align: center;
-    background-color: white;
+    background-color: #f8f8f8;
     border-radius: 10px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px;
 }
@@ -38,4 +38,21 @@
     background-color: #0a8d48;
     transform: scale(1.05, 1.05);
     cursor: pointer;
+}
+
+@media (max-width: 412px) {
+    .login-container {
+        max-width: 120px;
+        height: 150px;
+        /* background-color: #0a8d48; */
+
+    }
+
+    .login-container>img {
+        margin: 0;
+    }
+
+    .login-text>h1 {
+        font-size: 20px;
+    }
 }

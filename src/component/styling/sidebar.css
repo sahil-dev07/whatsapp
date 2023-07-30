@@ -13,6 +13,15 @@
     border-right: 1px solid lightgray;
 }
 
+.sidebar-header-user-data {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-header-user-data>h2 {
+    margin-left: 10px;
+}
+
 .sidebar-header-right {
     display: flex;
     justify-content: space-between;

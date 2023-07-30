@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { Avatar, IconButton } from '@mui/material'
-import SearchIcon from '@mui/icons-material/Search';
-import AttachFileIcon from '@mui/icons-material/AttachFile';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { Avatar } from '@mui/material'
+// import {IconButton}  from '@mui/material'
+// import SearchIcon from '@mui/icons-material/Search';
+// import AttachFileIcon from '@mui/icons-material/AttachFile';
+// import MoreVertIcon from '@mui/icons-material/MoreVert';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 import SendIcon from '@mui/icons-material/Send';
 import './styling/chat.css'
@@ -148,7 +149,7 @@ const Chat = () => {
                     <p>{`last seen ${getLastMessageTimestamp()}`}</p>
                 </div>
 
-                <div className="chat-header-right">
+                {/* <div className="chat-header-right">
                     <IconButton >
                         <SearchIcon />
                     </IconButton>
@@ -159,7 +160,7 @@ const Chat = () => {
                         <MoreVertIcon />
                     </IconButton>
 
-                </div>
+                </div> */}
             </div>
 
             <div className="chat-body">
@@ -181,7 +182,7 @@ const Chat = () => {
 
 
                 {showEmoji && <EmojiPicker
-                    emojiStyle='facebook'
+                    // emojiStyle='facebook'
                     width='300px'
                     onEmojiClick={onEmojiClick} />}
                 {/* <EmojiPicker /> */}
