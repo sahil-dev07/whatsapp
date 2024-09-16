@@ -29,7 +29,7 @@ function App() {
       }
     })
     return () => unsubscribe()
-  }, [auth])
+  }, [auth , dispatch])
 
   return (
     <div className="app">
