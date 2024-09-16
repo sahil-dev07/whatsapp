@@ -1,8 +1,7 @@
 import { initializeApp } from 'firebase/app'
 import { collection, getFirestore } from 'firebase/firestore'
 import { getAuth, GoogleAuthProvider } from 'firebase/auth'
-
-
+import { getStorage } from 'firebase/storage'
 
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_APIKEY,
@@ -17,6 +16,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig)
 
 const db = getFirestore()
+const storage = getStorage(app)
 
 const collectionRef = collection(db, 'rooms')
 
@@ -24,4 +24,4 @@ const collectionRef = collection(db, 'rooms')
 const auth = getAuth(app)
 const provider = new GoogleAuthProvider()
 
-export { collectionRef, db, auth, provider }
+export { collectionRef, db, auth, provider, storage }

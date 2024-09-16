@@ -1,16 +1,17 @@
 .sidebar {
-    flex: .35;
-
     display: flex;
     flex-direction: column;
-
+    flex: 0.35;
+    border-right: 1px solid #dadada;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    height: 100vh;
 }
 
 .sidebar-header {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    border-right: 1px solid lightgray;
+    border-bottom: 1px solid #f6f6f6;
 }
 
 .sidebar-header-user-data {
@@ -19,12 +20,13 @@
 }
 
 .sidebar-header-user-data>h2 {
+    font-size: 16px;
     margin-left: 10px;
 }
 
 .sidebar-header-right {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
     min-width: 10vw;
 }
@@ -37,9 +39,9 @@
 .sidebar-search {
     display: flex;
     align-items: center;
+    background-color: #f6f6f6;
     height: 39px;
     padding: 10px;
-    background-color: #f6f6f6;
 }
 
 .sidebar-search-container {
@@ -47,7 +49,7 @@
     align-items: center;
     background-color: white;
     width: 100%;
-    height: 35p;
+    height: 35px;
     border-radius: 20px;
 }
 
@@ -63,13 +65,82 @@
 }
 
 .sidebar-chats {
+    flex: 1;
     background-color: white;
     overflow-y: scroll;
-    flex: 1;
+}
+
+/* Add these new styles for better scrollbar appearance */
+.sidebar-chats::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar-chats::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.sidebar-chats::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.sidebar-chats::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 @media (max-width: 412px) {
     .sidebar {
-        flex: .20;
+        flex: 0.1;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+    }
+
+    .sidebar-header {
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sidebar-header-user-data {
+        display: flex;
+        align-items: center;
+    }
+
+    .sidebar-header-user-data > h2 {
+        margin-left: 10px;
+        font-size: 14px;
+    }
+
+    .sidebar-search {
+        padding: 10px;
+    }
+
+    .sidebar-search-container > input {
+        font-size: 14px;
+    }
+
+    .sidebar-chats {
+        flex: 1;
+        overflow-y: auto;
+    }
+
+    .sidebar-header-right {
+        display: flex;
+    }
+
+    .logout-button {
+        margin-left: auto;
     }
 }

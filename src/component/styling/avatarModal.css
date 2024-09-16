@@ -1,0 +1,49 @@
+.avatar-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5); /* Very light overlay for focus */
+}
+
+.avatar-modal-content {
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-modal-image {
+  max-width: 80vw;
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+}
+
+.avatar-modal-close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background-color: white;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.avatar-modal-close:hover {
+  background-color: #f0f0f0;
+}

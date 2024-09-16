@@ -2,26 +2,57 @@
     display: flex;
     padding: 20px;
     cursor: pointer;
-    border-bottom: 1px solid #f6f6f6;
-    /* justify-content: space-between; */
-
+    border-bottom: 1px solid #e0e0e0;  /* Light grey border */
+    align-items: center;
 }
 
 .sidebarChat:hover {
-    background-color: #ebebeb;
-    /* background-color: aquamarine; */
+    background-color: #f5f5f5;  /* Lighter background on hover */
+}
+
+.sidebarChat > a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    flex: 1;
 }
 
 .sidebarChat-info {
     margin-left: 15px;
 }
 
-.sidebarChat-info>h2 {
+.sidebarChat-info > h2 {
     font-size: 16px;
     margin-bottom: 8px;
 }
 
-a {
-    text-decoration: none;
-    color: black;
+.sidebarChat-info > p {
+    font-size: 14px;
+    color: gray;
+}
+
+/* Style for the "Add new Room" option */
+.sidebarChat:last-child {
+    border-bottom: none;  /* Remove border for the last item */
+}
+
+.sidebarChat > h2 {
+    font-size: 18px;
+    color: #075e54;  /* WhatsApp green color */
+}
+
+/* Adjust avatar size */
+.sidebarChat .MuiAvatar-root {
+    width: 56.25px;  /* Increased from 45px (45 * 1.25) */
+    height: 56.25px; /* Increased from 45px (45 * 1.25) */
+}
+
+/* Style for the camera icon button */
+.sidebarChat > .MuiIconButton-root {
+    padding: 8px;
+}
+
+.sidebarChat > .MuiIconButton-root:hover {
+    background-color: rgba(0, 0, 0, 0.04);
 }
